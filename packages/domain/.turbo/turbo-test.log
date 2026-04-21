@@ -6,13 +6,20 @@
 
 [1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90m/Users/ronaldkoomneef/Desktop/Personal/Osmodian/Osmodian---Arena/packages/domain[39m
 
+[?25l [90m·[39m [2msrc/leaders/identity/[22mleader-identity[2m.spec.ts[22m[2m (4)[22m
  [32m✓[39m [2mtest/[22mproject-version[2m.spec.ts[22m[2m (1)[22m
-   [32m✓[39m PROJECT_VERSION[2m (1)[22m
-     [32m✓[39m exposes a version string
+[?25l[2K[1A[2K[1A[2K[G [90m·[39m [2msrc/leaders/progression/[22mleader-progression[2m.spec.ts[22m[2m (6)[22m
+ [32m✓[39m [2msrc/leaders/lifecycle/[22mleader-archive-state[2m.spec.ts[22m[2m (3)[22m
+ [32m✓[39m [2msrc/leaders/identity/[22mleader-identity[2m.spec.ts[22m[2m (4)[22m
+ [32m✓[39m [2mtest/[22mproject-version[2m.spec.ts[22m[2m (1)[22m
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[G [32m✓[39m [2mtest/[22mproject-version[2m.spec.ts[22m[2m (1)[22m
+ [32m✓[39m [2msrc/leaders/identity/[22mleader-identity[2m.spec.ts[22m[2m (4)[22m
+ [32m✓[39m [2msrc/leaders/lifecycle/[22mleader-archive-state[2m.spec.ts[22m[2m (3)[22m
+ [32m✓[39m [2msrc/leaders/progression/[22mleader-progression[2m.spec.ts[22m[2m (6)[22m
 
-[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
-[2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
-[2m   Start at [22m 17:13:44
-[2m   Duration [22m 557ms[2m (transform 40ms, setup 0ms, collect 31ms, tests 1ms, environment 0ms, prepare 273ms)[22m
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m14 passed[39m[22m[90m (14)[39m
+[2m   Start at [22m 17:52:05
+[2m   Duration [22m 645ms[2m (transform 238ms, setup 0ms, collect 299ms, tests 9ms, environment 0ms, prepare 1.21s)[22m
 
-[?25h
+[?25h[?25h

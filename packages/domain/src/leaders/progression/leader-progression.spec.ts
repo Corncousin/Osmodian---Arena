@@ -4,10 +4,7 @@ import {
   createInitialLeaderBracket,
   createLeaderBracket,
 } from "./leader-bracket.js";
-import {
-  createInitialLeaderLevel,
-  createLeaderLevel,
-} from "./leader-level.js";
+import { createInitialLeaderLevel, createLeaderLevel } from "./leader-level.js";
 import { createInitialLeaderXp, createLeaderXp } from "./leader-xp.js";
 
 describe("leader progression value objects", () => {
