@@ -1,0 +1,1 @@
+{"version":3,"file":"health-response.schema.js","sourceRoot":"","sources":["../../src/health/health-response.schema.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,CAAC,EAAE,MAAM,KAAK,CAAC;AAExB,MAAM,CAAC,MAAM,oBAAoB,GAAG,CAAC,CAAC,MAAM,CAAC;IAC3C,MAAM,EAAE,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC;IACvB,OAAO,EAAE,CAAC,CAAC,OAAO,CAAC,KAAK,CAAC;CAC1B,CAAC,CAAC"}

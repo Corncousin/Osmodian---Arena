@@ -1,4 +1,4 @@
-export function App(): JSX.Element {
+export function App() {
   return (
     <main>
       <h1>Osmodian Arena</h1>
