@@ -10,17 +10,16 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "declaration": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
-      "@osmodian-arena/domain/*": ["packages/domain/src/*"],
-      "@osmodian-arena/contracts/*": ["packages/contracts/src/*"],
-      "@osmodian-arena/test-utils/*": ["packages/test-utils/src/*"]
+      "@osmodian-arena/domain/*": ["./packages/domain/src/*"],
+      "@osmodian-arena/contracts/*": ["./packages/contracts/src/*"],
+      "@osmodian-arena/test-utils/*": ["./packages/test-utils/src/*"]
     }
   }
 }

@@ -1,0 +1,5 @@
+
+
+> @osmodian-arena/test-utils@ typecheck /Users/ronaldkoomneef/Desktop/Personal/Osmodian/Osmodian---Arena/packages/test-utils
+> tsc -p tsconfig.json --noEmit
+

@@ -5,15 +5,28 @@
   "engines": {
     "node": ">=20.0.0"
   },
+
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint:staged",
+    "pre-push": "pnpm verify"
+  },
+
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
+    "format": "biome check --write .",
+    "hooks:install": "simple-git-hooks",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "lint:staged": "biome check --write --staged --files-ignore-unknown=true --no-errors-on-unmatched",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
-    "format": "turbo run format"
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
+
   "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "simple-git-hooks": "^2.13.1",
     "turbo": "^2.0.0",
     "typescript": "^5.6.0"
   }

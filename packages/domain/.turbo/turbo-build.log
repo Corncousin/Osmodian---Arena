@@ -1,0 +1,5 @@
+
+
+> @osmodian-arena/domain@ build /Users/ronaldkoomneef/Desktop/Personal/Osmodian/Osmodian---Arena/packages/domain
+> tsc -p tsconfig.json
+

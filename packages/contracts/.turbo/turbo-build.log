@@ -1,0 +1,5 @@
+
+
+> @osmodian-arena/contracts@ build /Users/ronaldkoomneef/Desktop/Personal/Osmodian/Osmodian---Arena/packages/contracts
+> tsc -p tsconfig.json
+

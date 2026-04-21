@@ -1,1 +1,1 @@
-export * from './shared/project-version.js';
+export * from "./shared/project-version.js";

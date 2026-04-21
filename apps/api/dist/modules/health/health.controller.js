@@ -7,24 +7,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Controller, Get } from '@nestjs/common';
-import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { Controller, Get } from "@nestjs/common";
+import { ApiOkResponse, ApiTags } from "@nestjs/swagger";
 let HealthController = class HealthController {
     getHealth() {
         return {
-            status: 'ok',
-            service: 'api',
+            status: "ok",
+            service: "api",
         };
     }
 };
 __decorate([
     Get(),
     ApiOkResponse({
-        description: 'Simple health endpoint for the Arena API.',
+        description: "Simple health endpoint for the Arena API.",
         schema: {
             example: {
-                status: 'ok',
-                service: 'api',
+                status: "ok",
+                service: "api",
             },
         },
     }),
@@ -33,8 +33,8 @@ __decorate([
     __metadata("design:returntype", Object)
 ], HealthController.prototype, "getHealth", null);
 HealthController = __decorate([
-    ApiTags('health'),
-    Controller('health')
+    ApiTags("health"),
+    Controller("health")
 ], HealthController);
 export { HealthController };
 //# sourceMappingURL=health.controller.js.map

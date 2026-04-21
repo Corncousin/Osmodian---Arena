@@ -1,0 +1,5 @@
+
+
+> @osmodian-arena/web@ typecheck /Users/ronaldkoomneef/Desktop/Personal/Osmodian/Osmodian---Arena/apps/web
+> tsc -p tsconfig.json --noEmit
+

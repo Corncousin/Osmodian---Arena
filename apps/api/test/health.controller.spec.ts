@@ -1,14 +1,14 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it } from "vitest";
 
-import { HealthController } from '../src/modules/health/health.controller.js';
+import { HealthController } from "../src/modules/health/health.controller.js";
 
-describe('HealthController', () => {
-  it('returns a stable health payload', () => {
+describe("HealthController", () => {
+  it("returns a stable health payload", () => {
     const controller = new HealthController();
 
     expect(controller.getHealth()).toEqual({
-      status: 'ok',
-      service: 'api',
+      status: "ok",
+      service: "api",
     });
   });
 });
