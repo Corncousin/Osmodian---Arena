@@ -18,7 +18,7 @@
     "hooks:install": "simple-git-hooks",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "lint:staged": "biome check --write --staged --files-ignore-unknown=true --no-errors-on-unmatched",
+    "lint:staged": "biome check --staged --files-ignore-unknown=true --no-errors-on-unmatched",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
     "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
