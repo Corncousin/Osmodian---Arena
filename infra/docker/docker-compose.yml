@@ -1,0 +1,18 @@
+services:
+  api:
+    image: node:22-alpine
+    working_dir: /workspace
+    command: sh -lc "corepack enable && pnpm install && pnpm --filter @osmodian-arena/api dev"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../../:/workspace
+
+  web:
+    image: node:22-alpine
+    working_dir: /workspace
+    command: sh -lc "corepack enable && pnpm install && pnpm --filter @osmodian-arena/web dev -- --host 0.0.0.0"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../../:/workspace
