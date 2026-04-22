@@ -13,4 +13,7 @@ export * from "./leaders/progression/leader-xp.js";
 export * from "./leaders/stats/leader-starting-stats.js";
 export * from "./leaders/stats/leader-stats.js";
 export * from "./leaders/stats/stat-points.js";
+export * from "./leaders/update-stats/update-leader-stats.command.js";
+export * from "./leaders/update-stats/update-leader-stats.js";
+export * from "./leaders/update-stats/update-leader-stats.result.js";
 export * from "./shared/project-version.js";
