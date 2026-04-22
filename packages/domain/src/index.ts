@@ -1,3 +1,6 @@
+export * from "./leaders/create/create-leader.command.js";
+export * from "./leaders/create/create-leader.js";
+export * from "./leaders/create/create-leader.result.js";
 export * from "./leaders/identity/leader-id.js";
 export * from "./leaders/identity/leader-name.js";
 export * from "./leaders/identity/player-id.js";
