@@ -12,8 +12,7 @@ import type { LeaderXp } from "./progression/leader-xp.js";
 import type { LeaderStats } from "./stats/leader-stats.js";
 import type { StatPoints } from "./stats/stat-points.js";
 
-export type Leader = {
-  readonly id: LeaderId;
+export type NewLeader = {
   readonly playerId: PlayerId;
   readonly name: LeaderName;
   readonly stats: LeaderStats;
@@ -24,8 +23,11 @@ export type Leader = {
   readonly archiveState: LeaderArchiveState;
 };
 
-export type CreateLeaderEntityInput = {
+export type Leader = NewLeader & {
   readonly id: LeaderId;
+};
+
+export type CreateNewLeaderInput = {
   readonly playerId: PlayerId;
   readonly name: LeaderName;
   readonly stats: LeaderStats;
@@ -36,9 +38,8 @@ export type CreateLeaderEntityInput = {
   readonly archiveState: LeaderArchiveState;
 };
 
-export function createLeaderEntity(input: CreateLeaderEntityInput): Leader {
+export function createNewLeader(input: CreateNewLeaderInput): NewLeader {
   return {
-    id: input.id,
     playerId: input.playerId,
     name: input.name,
     stats: input.stats,
@@ -47,6 +48,16 @@ export function createLeaderEntity(input: CreateLeaderEntityInput): Leader {
     xp: input.xp,
     gold: input.gold,
     archiveState: input.archiveState,
+  };
+}
+
+export function createPersistedLeader(
+  leaderId: LeaderId,
+  newLeader: NewLeader,
+): Leader {
+  return {
+    id: leaderId,
+    ...newLeader,
   };
 }
 
