@@ -10,6 +10,7 @@ export type LeaderStats = {
   readonly str: StatPoints;
   readonly dex: StatPoints;
   readonly lck: StatPoints;
+  readonly crt: StatPoints;
   readonly unspentStatPoints: StatPoints;
 };
 
@@ -18,6 +19,7 @@ export type CreateLeaderStatsInput = {
   readonly str: number;
   readonly dex: number;
   readonly lck: number;
+  readonly crt: number;
   readonly unspentStatPoints: number;
 };
 
@@ -27,6 +29,7 @@ export function createLeaderStats(input: CreateLeaderStatsInput): LeaderStats {
     str: createStatPoints(input.str),
     dex: createStatPoints(input.dex),
     lck: createStatPoints(input.lck),
+    crt: createStatPoints(input.crt),
     unspentStatPoints: createStatPoints(input.unspentStatPoints),
   };
 }
@@ -37,6 +40,7 @@ export function createInitialLeaderStats(): LeaderStats {
     str: 0,
     dex: 0,
     lck: 0,
+    crt: 0,
     unspentStatPoints: createInitialFreeStartingStatPoints(),
   });
 }

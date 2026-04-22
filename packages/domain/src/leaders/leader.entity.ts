@@ -10,6 +10,7 @@ import type { LeaderBracket } from "./progression/leader-bracket.js";
 import type { LeaderLevel } from "./progression/leader-level.js";
 import type { LeaderXp } from "./progression/leader-xp.js";
 import type { LeaderStats } from "./stats/leader-stats.js";
+import type { StatPoints } from "./stats/stat-points.js";
 
 export type Leader = {
   readonly id: LeaderId;
@@ -19,6 +20,7 @@ export type Leader = {
   readonly bracket: LeaderBracket;
   readonly level: LeaderLevel;
   readonly xp: LeaderXp;
+  readonly gold: StatPoints;
   readonly archiveState: LeaderArchiveState;
 };
 
@@ -30,6 +32,7 @@ export type CreateLeaderEntityInput = {
   readonly bracket: LeaderBracket;
   readonly level: LeaderLevel;
   readonly xp: LeaderXp;
+  readonly gold: StatPoints;
   readonly archiveState: LeaderArchiveState;
 };
 
@@ -42,6 +45,7 @@ export function createLeaderEntity(input: CreateLeaderEntityInput): Leader {
     bracket: input.bracket,
     level: input.level,
     xp: input.xp,
+    gold: input.gold,
     archiveState: input.archiveState,
   };
 }

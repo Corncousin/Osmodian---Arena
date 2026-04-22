@@ -11,6 +11,7 @@ describe("leader stats", () => {
       str: 0,
       dex: 0,
       lck: 0,
+      crt: 0,
       unspentStatPoints: 3,
     });
   });
@@ -21,6 +22,7 @@ describe("leader stats", () => {
       str: 2,
       dex: 1,
       lck: 3,
+      crt: 2,
       unspentStatPoints: 0,
     });
 
@@ -29,6 +31,7 @@ describe("leader stats", () => {
       str: 2,
       dex: 1,
       lck: 3,
+      crt: 2,
       unspentStatPoints: 0,
     });
   });
@@ -40,6 +43,7 @@ describe("leader stats", () => {
         str: -1,
         dex: 0,
         lck: 0,
+        crt: 0,
         unspentStatPoints: 3,
       }),
     ).toThrow("Stat points must be an integer greater than or equal to 0.");
@@ -51,7 +55,8 @@ describe("leader stats", () => {
         hp: 2,
         str: 0,
         dex: 0,
-        lck: 0.5,
+        lck: 0,
+        crt: 0.5,
         unspentStatPoints: 3,
       }),
     ).toThrow("Stat points must be an integer greater than or equal to 0.");

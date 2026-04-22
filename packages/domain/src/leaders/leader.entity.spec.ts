@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+
 import { createLeaderId } from "./identity/leader-id.js";
 import { createLeaderName } from "./identity/leader-name.js";
 import { createPlayerId } from "./identity/player-id.js";
@@ -12,6 +13,7 @@ import { createInitialLeaderBracket } from "./progression/leader-bracket.js";
 import { createInitialLeaderLevel } from "./progression/leader-level.js";
 import { createInitialLeaderXp } from "./progression/leader-xp.js";
 import { createInitialLeaderStats } from "./stats/leader-stats.js";
+import { createStatPoints } from "./stats/stat-points.js";
 
 describe("leader entity", () => {
   it("creates a leader entity", () => {
@@ -23,6 +25,7 @@ describe("leader entity", () => {
       bracket: createInitialLeaderBracket(),
       level: createInitialLeaderLevel(),
       xp: createInitialLeaderXp(),
+      gold: createStatPoints(200),
       archiveState: createActiveLeaderArchiveState(),
     });
 
@@ -32,6 +35,7 @@ describe("leader entity", () => {
     expect(leader.bracket).toBe(1);
     expect(leader.level).toBe(0);
     expect(leader.xp).toBe(0);
+    expect(leader.gold).toBe(200);
     expect(isLeaderArchived(leader.archiveState)).toBe(false);
   });
 
@@ -44,6 +48,7 @@ describe("leader entity", () => {
       bracket: createInitialLeaderBracket(),
       level: createInitialLeaderLevel(),
       xp: createInitialLeaderXp(),
+      gold: createStatPoints(200),
       archiveState: createActiveLeaderArchiveState(),
     });
 
