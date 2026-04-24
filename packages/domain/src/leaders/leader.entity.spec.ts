@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { createLeaderId } from "./identity/leader-id.js";
 import { createLeaderName } from "./identity/leader-name.js";
 import { createPlayerId } from "./identity/player-id.js";
+import { createTribeId } from "./identity/tribe-id.js";
 import {
   archiveLeader,
   createNewLeader,
@@ -23,6 +24,7 @@ describe("leader entity", () => {
   it("creates a new leader without an id", () => {
     const newLeader = createNewLeader({
       playerId: createPlayerId("player-1"),
+      tribeId: createTribeId("tribe-1"),
       name: createLeaderName("Grok Hammer"),
       stats: createInitialLeaderStats(),
       bracket: createInitialLeaderBracket(),
@@ -44,6 +46,7 @@ describe("leader entity", () => {
   it("creates a persisted leader from a new leader and leader id", () => {
     const newLeader = createNewLeader({
       playerId: createPlayerId("player-1"),
+      tribeId: createTribeId("tribe-1"),
       name: createLeaderName("Grok Hammer"),
       stats: createInitialLeaderStats(),
       bracket: createInitialLeaderBracket(),
@@ -64,6 +67,7 @@ describe("leader entity", () => {
   it("archives a persisted leader", () => {
     const newLeader = createNewLeader({
       playerId: createPlayerId("player-1"),
+      tribeId: createTribeId("tribe-1"),
       name: createLeaderName("Grok Hammer"),
       stats: createInitialLeaderStats(),
       bracket: createInitialLeaderBracket(),

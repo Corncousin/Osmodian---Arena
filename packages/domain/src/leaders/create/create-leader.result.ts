@@ -2,6 +2,7 @@ import type { Leader } from "../leader.entity.js";
 
 export type CreateLeaderFailureReason =
   | "invalid_player_id"
+  | "invalid_tribe_id"
   | "invalid_leader_name"
   | "leader_limit_reached"
   | "leader_name_taken";

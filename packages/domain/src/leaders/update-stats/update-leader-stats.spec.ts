@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from "vitest";
 import { createLeaderId } from "../identity/leader-id.js";
 import { createLeaderName } from "../identity/leader-name.js";
 import { createPlayerId } from "../identity/player-id.js";
+import { createTribeId } from "../identity/tribe-id.js";
 import {
   createNewLeader,
   createPersistedLeader,
@@ -28,6 +29,7 @@ describe("update leader stats", () => {
   function createLeader(): Leader {
     const newLeader = createNewLeader({
       playerId: createPlayerId("player-1"),
+      tribeId: createTribeId("tribe-1"),
       name: createLeaderName("Grok Hammer"),
       stats: createLeaderStats({
         hp: 2,

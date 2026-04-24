@@ -1,5 +1,6 @@
 import { createLeaderName, type LeaderName } from "../identity/leader-name.js";
 import { createPlayerId, type PlayerId } from "../identity/player-id.js";
+import { createTribeId, type TribeId } from "../identity/tribe-id.js";
 import {
   createNewLeader,
   type Leader,
@@ -42,6 +43,14 @@ export async function createLeader(
     return createLeaderFailureResult("invalid_player_id");
   }
 
+  let tribeId: TribeId;
+
+  try {
+    tribeId = createTribeId(command.tribeId);
+  } catch {
+    return createLeaderFailureResult("invalid_tribe_id");
+  }
+
   let leaderName: LeaderName;
 
   try {
@@ -68,6 +77,7 @@ export async function createLeader(
 
   const newLeader = createNewLeader({
     playerId,
+    tribeId,
     name: leaderName,
     stats: createInitialLeaderStats(),
     bracket: createInitialLeaderBracket(),

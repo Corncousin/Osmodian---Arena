@@ -1,6 +1,7 @@
 import type { LeaderId } from "./identity/leader-id.js";
 import type { LeaderName } from "./identity/leader-name.js";
 import type { PlayerId } from "./identity/player-id.js";
+import type { TribeId } from "./identity/tribe-id.js";
 import type { ArchivedAt } from "./lifecycle/archived-at.js";
 import {
   createArchivedLeaderArchiveState,
@@ -14,6 +15,7 @@ import type { StatPoints } from "./stats/stat-points.js";
 
 export type NewLeader = {
   readonly playerId: PlayerId;
+  readonly tribeId: TribeId;
   readonly name: LeaderName;
   readonly stats: LeaderStats;
   readonly bracket: LeaderBracket;
@@ -29,6 +31,7 @@ export type Leader = NewLeader & {
 
 export type CreateNewLeaderInput = {
   readonly playerId: PlayerId;
+  readonly tribeId: TribeId;
   readonly name: LeaderName;
   readonly stats: LeaderStats;
   readonly bracket: LeaderBracket;
@@ -41,6 +44,7 @@ export type CreateNewLeaderInput = {
 export function createNewLeader(input: CreateNewLeaderInput): NewLeader {
   return {
     playerId: input.playerId,
+    tribeId: input.tribeId,
     name: input.name,
     stats: input.stats,
     bracket: input.bracket,

@@ -28,6 +28,7 @@ describe("create leader", () => {
   ): CreateLeaderCommand {
     return {
       playerId: "player-1",
+      tribeId: "tribe-1",
       leaderName: "Grok Hammer",
       ...overrides,
     };
@@ -46,6 +47,7 @@ describe("create leader", () => {
 
     expect(result.leader.id).toBe("leader-1");
     expect(result.leader.playerId).toBe("player-1");
+    expect(result.leader.tribeId).toBe("tribe-1");
     expect(result.leader.name).toBe("Grok Hammer");
     expect(result.leader.bracket).toBe(1);
     expect(result.leader.level).toBe(0);
@@ -72,6 +74,23 @@ describe("create leader", () => {
     expect(result).toEqual({
       ok: false,
       reason: "invalid_player_id",
+    });
+    expect(dependencies.countActiveLeadersForPlayer).not.toHaveBeenCalled();
+    expect(dependencies.isLeaderNameTakenForPlayer).not.toHaveBeenCalled();
+    expect(dependencies.saveLeader).not.toHaveBeenCalled();
+  });
+
+  it("returns invalid_tribe_id when tribe id is invalid", async () => {
+    const dependencies = createDependencies();
+
+    const result = await createLeader(
+      createCommand({ tribeId: "   " }),
+      dependencies,
+    );
+
+    expect(result).toEqual({
+      ok: false,
+      reason: "invalid_tribe_id",
     });
     expect(dependencies.countActiveLeadersForPlayer).not.toHaveBeenCalled();
     expect(dependencies.isLeaderNameTakenForPlayer).not.toHaveBeenCalled();

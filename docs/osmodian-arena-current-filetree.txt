@@ -61,6 +61,7 @@ osmodian-arena/
 │   │   │   │   │   ├── leader-name.spec.ts
 │   │   │   │   │   ├── leader-name.ts
 │   │   │   │   │   └── player-id.ts
+                    --- tribe-id.ts
 │   │   │   │   ├── lifecycle/
 │   │   │   │   │   ├── archived-at.ts
 │   │   │   │   │   ├── leader-archive-state.spec.ts
@@ -79,6 +80,11 @@ osmodian-arena/
 │   │   │   │   │   └── stat-points.ts
 │   │   │   │   ├── leader.entity.spec.ts
 │   │   │   │   └── leader.entity.ts
+|   |   |   |   -packages/domain/src/leaders/update-stats/
+                    update-leader-stats.command.ts
+                    update-leader-stats.result.ts
+                    update-leader-stats.ts
+                    update-leader-stats.spec.ts
 │   │   │   └── shared/
 │   │   │       └── project-version.ts
 │   │   └── test/
